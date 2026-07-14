@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoftwareHub - Your Digital Toolkit</title>
+    
+<link rel="stylesheet" href="style.css?v=2" /></head>
+<body class="">
+    <!-- News Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker" id="ticker">
+            <div class="ticker-item"><span class="badge">🔥 NEW</span> CodeForge IDE v4.2 released with AI-powered code completion</div>
+            <div class="ticker-item"><span class="badge">⚡ UPDATE</span> PixelCraft Studio adds new 3D rendering engine — 40% faster exports</div>
+            <div class="ticker-item"><span class="badge">🎉 FEATURED</span> TaskFlow Pro wins "Best Productivity App 2026" award</div>
+            <div class="ticker-item"><span class="badge">🔒 SECURITY</span> ShieldGuard 8.0 with real-time zero-day threat protection</div>
+            <div class="ticker-item"><span class="badge"> NEW</span> VideoMaster Pro now supports 8K video editing natively</div>
+            <div class="ticker-item"><span class="badge">☁️ UPDATE</span> CloudSync Manager introduces E2E encrypted sync protocol</div>
+            <div class="ticker-item"><span class="badge">🆓 FREE</span> DataVault Encrypt — 12-month premium free for new users</div>
+            <div class="ticker-item"><span class="badge">🎵 NEW</span> SoundWave Studio adds spatial audio mixing tools</div>
+            <div class="ticker-item"><span class="badge">📊 UPDATE</span> NetworkPro Monitor now with IoT device scanning</div>
+            <div class="ticker-item"><span class="badge">📄 NEW</span> PDFMaster Suite v3.0 with AI document summarization</div>
+            <div class="ticker-item"><span class="badge"> UPDATE</span> ScreenCapture Pro adds automatic scroll capture</div>
+            <div class="ticker-item"><span class="badge">🗄️ NEW</span> DatabaseForge 6.0 with multi-cloud query support</div>
+            <!-- Duplicate for seamless scroll -->
+            <div class="ticker-item"><span class="badge"> NEW</span> CodeForge IDE v4.2 released with AI-powered code completion</div>
+            <div class="ticker-item"><span class="badge">⚡ UPDATE</span> PixelCraft Studio adds new 3D rendering engine — 40% faster exports</div>
+            <div class="ticker-item"><span class="badge">🎉 FEATURED</span> TaskFlow Pro wins "Best Productivity App 2026" award</div>
+            <div class="ticker-item"><span class="badge">🔒 SECURITY</span> ShieldGuard 8.0 with real-time zero-day threat protection</div>
+            <div class="ticker-item"><span class="badge">🎬 NEW</span> VideoMaster Pro now supports 8K video editing natively</div>
+            <div class="ticker-item"><span class="badge">☁️ UPDATE</span> CloudSync Manager introduces E2E encrypted sync protocol</div>
+            <div class="ticker-item"><span class="badge">🆓 FREE</span> DataVault Encrypt — 12-month premium free for new users</div>
+            <div class="ticker-item"><span class="badge">🎵 NEW</span> SoundWave Studio adds spatial audio mixing tools</div>
+            <div class="ticker-item"><span class="badge"> UPDATE</span> NetworkPro Monitor now with IoT device scanning</div>
+            <div class="ticker-item"><span class="badge">📄 NEW</span> PDFMaster Suite v3.0 with AI document summarization</div>
+            <div class="ticker-item"><span class="badge">📸 UPDATE</span> ScreenCapture Pro adds automatic scroll capture</div>
+            <div class="ticker-item"><span class="badge">🗄️ NEW</span> DatabaseForge 6.0 with multi-cloud query support</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">🖥️</div>
+                <div class="logo-text editable-text">Software<span>Hub</span></div>
+            </a>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search software by name, category, or tags..." oninput="filterSoftware()" />
+            </div>
+            <div class="header-actions">
+                <button class="btn-header btn-outline" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Theme" style="padding: 10px 15px;">🌙</button>
+                <button class="btn-header btn-outline" onclick="alert('Sign in feature coming soon!')">Sign In</button>
+                <button class="btn-header btn-primary">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Category Section -->
+    <div class="category-section">
+        <div class="section-header">
+            <h2 class="section-title editable-text">Browse <span class="editable-text">Software</span></h2>
+        </div>
+        <div class="category-tabs" id="categoryTabs">
+            <button class="category-tab active" data-category="all" onclick="filterByCategory('all', this)">All Software <span class="tab-count">12</span></button>
+            <button class="category-tab" data-category="development" onclick="filterByCategory('development', this)">💻 Development <span class="tab-count">2</span></button>
+            <button class="category-tab" data-category="design" onclick="filterByCategory('design', this)">🎨 Design <span class="tab-count">1</span></button>
+            <button class="category-tab" data-category="productivity" onclick="filterByCategory('productivity', this)">📋 Productivity <span class="tab-count">1</span></button>
+            <button class="category-tab" data-category="security" onclick="filterByCategory('security', this)">🔒 Security <span class="tab-count">2</span></button>
+            <button class="category-tab" data-category="multimedia" onclick="filterByCategory('multimedia', this)">🎬 Multimedia <span class="tab-count">2</span></button>
+            <button class="category-tab" data-category="utilities" onclick="filterByCategory('utilities', this)">🔧 Utilities <span class="tab-count">4</span></button>
+        </div>
+        <div class="controls-bar">
+            <span class="results-count" id="resultsCount">Showing <strong>12</strong> software</span>
+            <div class="view-controls">
+                <select class="sort-select" id="sortSelect" onchange="sortSoftware()">
+                    <option value="popular">Most Popular</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="newest">Newest First</option>
+                    <option value="name">Alphabetical</option>
+                    <option value="size">Size (Small First)</option>
+                </select>
+                <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid View">⊞</button>
+                <button class="view-btn" id="listBtn" onclick="setView('list')" title="List View">☰</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Software Grid -->
+    <div class="software-grid" id="softwareGrid"></div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="if(event.target === this) closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">Software Details</h3>
+                <button class="modal-close" id="mainModalCloseBtn">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">🖥️</div>
+                        <div class="logo-text editable-text">Software<span>Hub</span></div>
+                    </a>
+                    <p class="editable-text">Your one-stop destination for discovering, trying, and downloading the best software tools. Curated, verified, and trusted by millions of users worldwide.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="editable-text">Categories</h4>
+                    <a href="#" class="">Development</a>
+                    <a href="#" class="">Design</a>
+                    <a href="#" class="">Productivity</a>
+                    <a href="#" class="">Security</a>
+                    <a href="#" class="">Multimedia</a>
+                    <a href="#" class="">Utilities</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="editable-text">Resources</h4>
+                    <a href="#" class="">Documentation</a>
+                    <a href="#" class="">API Reference</a>
+                    <a href="#" class="">Community Forum</a>
+                    <a href="#" class="">Blog</a>
+                    <a href="#" class="">Tutorials</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="editable-text">Company</h4>
+                    <a href="#" class="">About Us</a>
+                    <a href="#" class="">Careers</a>
+                    <a href="#" class="">Privacy Policy</a>
+                    <a href="#" class="">Terms of Service</a>
+                    <a href="#" class="">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="editable-text">© 2026 SoftwareHub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Twitter"></a>
+                    <a href="#" class="social-link" title="GitHub"></a>
+                    <a href="#" class="social-link" title="Discord"></a>
+                    <a href="#" class="social-link" title="YouTube">▶</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+<script src="script.js?v=2"></script></body></html>
