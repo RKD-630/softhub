@@ -470,6 +470,25 @@
                 icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15aa38417-1a84-466c-be89-0630ef89106a.png",
                 features: ["Multi-cloud Query Support", "Visual Schema Designer", "Data Visualization", "Auto Backup Scheduling", "Query Builder", "Performance Analyzer"]
             }
+                            {
+                id: 25,
+                name: "Booklet",
+                url: "https://rkd-630.github.io/player",
+                developer: "CyberShield Corp",
+                category: "security",
+                description: "Advanced cybersecurity suite offering real-time malware protection, firewall management, VPN encryption, and zero-day threat detection.",
+                version: "6.0.2",
+                size: "310 MB",
+                rating: 4.7,
+                downloads: 890000,
+                price: "$19.99/mo",
+                tags: ["Database", "Multi-cloud", "Visualization"],
+                isNew: true,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15aa38417-1a84-466c-be89-0630ef89106a.png",
+                features: ["Multi-cloud Query Support", "Visual Schema Designer", "Data Visualization", "Auto Backup Scheduling", "Query Builder", "Performance Analyzer"]
+            }
         ];
 
         let currentCategory = 'all';
