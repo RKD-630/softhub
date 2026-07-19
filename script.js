@@ -470,7 +470,8 @@
                 icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15aa38417-1a84-466c-be89-0630ef89106a.png",
                 features: ["Multi-cloud Query Support", "Visual Schema Designer", "Data Visualization", "Auto Backup Scheduling", "Query Builder", "Performance Analyzer"]
             }
-                   ];
+        ];
+
         let currentCategory = 'all';
         let currentView = 'grid';
         let currentSort = 'popular';
@@ -828,6 +829,8 @@
         });
 
         // Initialize
+        const storedCustomSoftware = JSON.parse(localStorage.getItem('customSoftware') || '[]');
+        storedCustomSoftware.reverse().forEach(sw => softwareData.unshift(sw));
         renderSoftware(softwareData);
 
         // Bind modal close button explicitly
@@ -871,4 +874,79 @@
                 const walk = (x - startX) * 1.5; // Scroll speed
                 tabsContainer.scrollLeft = scrollLeft - walk;
             });
+        }
+
+        // Admin features
+        let isAdmin = false;
+
+        function handleLogin() {
+            if (isAdmin) {
+                // Logout
+                isAdmin = false;
+                document.getElementById('addSoftwareBtn').style.display = 'none';
+                document.getElementById('loginBtn').textContent = 'Sign In';
+                alert('Logged out successfully.');
+                return;
+            }
+
+            const email = prompt('Enter your email to sign in:');
+            if (email === 'ramkrishan630@gmail.com') {
+                alert('Email confirmed. Welcome Admin!');
+                isAdmin = true;
+                document.getElementById('addSoftwareBtn').style.display = 'inline-block';
+                document.getElementById('loginBtn').textContent = 'Admin (Log out)';
+            } else if (email) {
+                alert('Access denied. Only admin email is allowed.');
+            }
+        }
+
+        function openAddSoftwareModal() {
+            document.getElementById('addSoftwareModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAddSoftwareModal() {
+            document.getElementById('addSoftwareModalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function handleAddSoftware(event) {
+            event.preventDefault();
+            
+            const newSoftware = {
+                id: parseInt(document.getElementById('as_id').value),
+                name: document.getElementById('as_name').value,
+                url: document.getElementById('as_url').value,
+                developer: document.getElementById('as_developer').value,
+                category: document.getElementById('as_category').value,
+                description: document.getElementById('as_description').value,
+                version: document.getElementById('as_version').value,
+                size: document.getElementById('as_size').value,
+                rating: parseFloat(document.getElementById('as_rating').value),
+                downloads: parseInt(document.getElementById('as_downloads').value),
+                price: document.getElementById('as_price').value,
+                tags: document.getElementById('as_tags').value.split(',').map(tag => tag.trim()).filter(tag => tag),
+                isPopular: document.getElementById('as_isPopular').checked,
+                verified: document.getElementById('as_verified').checked,
+                icon: document.getElementById('as_icon').value,
+                features: document.getElementById('as_features').value.split(',').map(f => f.trim()).filter(f => f),
+                isNew: true
+            };
+            
+            softwareData.unshift(newSoftware); // Add to the top
+            
+            // Save permanently to localStorage
+            const storedCustomSoftware = JSON.parse(localStorage.getItem('customSoftware') || '[]');
+            storedCustomSoftware.unshift(newSoftware);
+            localStorage.setItem('customSoftware', JSON.stringify(storedCustomSoftware));
+            
+            // Re-render
+            filterSoftware();
+            
+            closeAddSoftwareModal();
+            document.getElementById('addSoftwareForm').reset();
+            alert('Software card added successfully!');
+
+            // Auto-logout after adding
+            handleLogin();
         }
