@@ -148,8 +148,8 @@
             },
             {
                 id: 7,
-                name: "Scan Document",
-                url: "https://rkd-630.github.io/Converter",
+                name: "Cover Book",
+                url: "https://rkd-630.github.io/https://rkd-630.github.io/coverbook/",
                 developer: "SecureVault Inc",
                 category: "security",
                 description: "Military-grade file encryption software with AES-256 encryption, secure file shredding, encrypted containers, and secure cloud backup.",
