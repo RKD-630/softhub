@@ -453,7 +453,7 @@
             },
             {
                 id: 24,
-                name: "630RKD",
+                name: "Booklet",
                 url: "https://rkd-630.github.io/player",
                 developer: "DataCore Systems",
                 category: "development",
@@ -472,8 +472,8 @@
             },
             {
                 id: 25,
-                name: "CodeMaster Pro",
-                url: "https://rkd-630.github.io/codemaster",
+                name: "coverbook",
+                url: "https://rkd-630.github.io/coverbook",
                 developer: "DevTech Solutions",
                 category: "development",
                 description: "Advanced code editor with AI pair programming and multi-language support.",
