@@ -2,17 +2,17 @@
         function toggleTheme() {
             const body = document.body;
             const btn = document.getElementById('themeToggleBtn');
-            body.classList.toggle('dark-theme');
-            if (body.classList.contains('dark-theme')) {
-                btn.innerHTML = '☀️';
-            } else {
+            body.classList.toggle('light-theme');
+            if (body.classList.contains('light-theme')) {
                 btn.innerHTML = '🌙';
+            } else {
+                btn.innerHTML = '☀️';
             }
         }
         // Software data
         const softwareData = [
             {
-                id: 0,
+                id: 11,
                 name: "Share With",
                 url: "https://rkd-630.github.io/sharewith",
                 developer: "CaptureTech Ltd",
@@ -51,11 +51,11 @@
             },
             {
                 id: 2,
-                name: "Unicon to Krutidev font Converter",
-                url: "https://rkd-630.github.io/postcraft",
-                developer: "SyncSoft Technologies",
-                category: "utilities",
-                description: "Intelligent cloud synchronization tool with end-to-end encryption, conflict resolution, selective sync, and support for all major cloud providers.",
+                name: "Web Viewer",
+                url: "https://rkd-630.github.io/Web-Viewer",
+                developer: "Creative Arts Inc",
+                category: "design",
+                description: "Professional graphic design suite with vector editing, photo manipulation, 3D rendering, and an extensive library of templates and assets.",
                 version: "8.5.0",
                 size: "1.2 GB",
                 rating: 4.7,
@@ -91,11 +91,11 @@
             },
             {
                 id: 4,
-                name: "Image Editor",
-                url: "https://rkd-630.github.io/v",
-                developer: "DataCore Systems",
-                category: "development",
-                description: "Visual database management tool with multi-cloud query support, schema designer, data visualization, and automated backup scheduling.",
+                name: "Html to web file Converter",
+                url: "https://rkd-630.github.io/TiingPong",
+                developer: "CyberShield Corp",
+                category: "security",
+                description: "Advanced cybersecurity suite offering real-time malware protection, firewall management, VPN encryption, and zero-day threat detection.",
                 version: "8.0.1",
                 size: "180 MB",
                 rating: 4.8,
@@ -129,11 +129,11 @@
             },
             {
                 id: 6,
-                name: "Geocam",
-                url: "https://rkd-630.github.io/Geocam",
-                developer: "CaptureTech Ltd",
+                name: "Wireless",
+                url: "https://rkd-630.github.io/wireless",
+                developer: "SyncSoft Technologies",
                 category: "utilities",
-                description: "Advanced screenshot and screen recording tool with auto-scroll capture, annotation editor, GIF creation, and cloud sharing integration.",
+                description: "Intelligent cloud synchronization tool with end-to-end encryption, conflict resolution, selective sync, and support for all major cloud providers.",
                 version: "5.1.0",
                 size: "65 MB",
                 rating: 4.5,
@@ -148,8 +148,8 @@
             },
             {
                 id: 7,
-                name: "Cover Book",
-                url: "https://rkd-630.github.io/https://rkd-630.github.io/coverbook/",
+                name: "Converter",
+                url: "https://rkd-630.github.io/Converter",
                 developer: "SecureVault Inc",
                 category: "security",
                 description: "Military-grade file encryption software with AES-256 encryption, secure file shredding, encrypted containers, and secure cloud backup.",
@@ -186,11 +186,11 @@
             },
             {
                 id: 9,
-                name: "Quick Response Code",
-                url: "https://rkd-630.github.io/qrcode",
-                developer: "Creative Arts Inc",
-                category: "design",
-                description: "Professional graphic design suite with vector editing, photo manipulation, 3D rendering, and an extensive library of templates and assets.",
+                name: "Social Media",
+                url: "https://rkd-630.github.io/Smedia",
+                developer: "NetSight Systems",
+                category: "utilities",
+                description: "Comprehensive network monitoring and diagnostics tool with real-time traffic analysis, IoT device scanning, and automated alerting system.",
                 version: "4.9.3",
                 size: "95 MB",
                 rating: 4.4,
@@ -205,11 +205,11 @@
             },
             {
                 id: 10,
-                name: "Social Media",
-                url: "https://rkd-630.github.io/Smedia",
-                developer: "NetSight Systems",
+                name: "Thumbnails for SM",
+                url: "https://rkd-630.github.io/thumbnails",
+                developer: "DocuTech Solutions",
                 category: "utilities",
-                description: "Intelligent cloud synchronization tool with end-to-end encryption, conflict resolution, selective sync, and support for all major cloud providers.",                
+                description: "Complete PDF toolkit with editing, conversion, OCR, digital signatures, and AI-powered document summarization capabilities.",
                 version: "3.0.1",
                 size: "120 MB",
                 rating: 4.5,
@@ -245,7 +245,7 @@
             {
                 id: 13,
                 name: "Passport Size Photo",
-                url: "https://rkd-630.github.io/pasfo",
+                url: "https://rkd-630.github.io/passport_photo",
                 developer: "DevTech Solutions",
                 category: "development",
                 description: "Next-generation integrated development environment with AI-powered code completion, real-time collaboration, and support for 50+ programming languages.",
@@ -263,11 +263,11 @@
             },
             {
                 id: 14,
-                name: "Smart Paint Brush",
-                url: "https://rkd-630.github.io/wireless",
-                developer: "SyncSoft Technologies",
-                category: "utilities",
-                description: "Comprehensive network monitoring and diagnostics tool with real-time traffic analysis, IoT device scanning, and automated alerting system.",
+                name: "Game-Hub",
+                url: "https://rkd-630.github.io/Game-Hub",
+                developer: "Creative Arts Inc",
+                category: "design",
+                description: "Professional graphic design suite with vector editing, photo manipulation, 3D rendering, and an extensive library of templates and assets.",
                 version: "8.5.0",
                 size: "1.2 GB",
                 rating: 4.7,
@@ -339,11 +339,11 @@
             },
             {
                 id: 18,
-                name: "Web Viewer",
-                url: "https://rkd-630.github.io/Web-Viewer",
-                developer: "Creative Arts Inc",
-                category: "design",
-                description: "Professional graphic design suite with vector editing, photo manipulation, 3D rendering, and an extensive library of templates and assets.",
+                name: "Post Craft",
+                url: "https://rkd-630.github.io/postcraft",
+                developer: "SyncSoft Technologies",
+                category: "utilities",
+                description: "Intelligent cloud synchronization tool with end-to-end encryption, conflict resolution, selective sync, and support for all major cloud providers.",
                 version: "5.1.0",
                 size: "65 MB",
                 rating: 4.5,
@@ -358,8 +358,8 @@
             },
             {
                 id: 19,
-                name: "Converter Hub",
-                url: "https://all-in-one-conversion-tool-app-3bu.caffeine.xyz/#caffeineAdminToken=c8676c2bd43dd3efa1696fa6ceef6b05059a22d5052e4479e8c42d9005691d34",
+                name: "Player",
+                url: "https://rkd-630.github.io/player",
                 developer: "SecureVault Inc",
                 category: "security",
                 description: "Military-grade file encryption software with AES-256 encryption, secure file shredding, encrypted containers, and secure cloud backup.",
@@ -415,8 +415,8 @@
             },
             {
                 id: 22,
-                name: "Electronic Calculator",
-                url: "https://rkd-630.github.io/electcalcu/",
+                name: "TingPong",
+                url: "https://rkd-630.github.io/TingPong",
                 developer: "DocuTech Solutions",
                 category: "utilities",
                 description: "Complete PDF toolkit with editing, conversion, OCR, digital signatures, and AI-powered document summarization capabilities.",
@@ -434,11 +434,11 @@
             },
             {
                 id: 23,
-                name: "Thumbnails for SM",
-                url: "https://rkd-630.github.io/thumbnails",
-                developer: "DocuTech Solutions",
+                name: "Geocam",
+                url: "https://rkd-630.github.io/Geocam",
+                developer: "CaptureTech Ltd",
                 category: "utilities",
-                description: "Complete PDF toolkit with editing, conversion, OCR, digital signatures, and AI-powered document summarization capabilities.",
+                description: "Advanced screenshot and screen recording tool with auto-scroll capture, annotation editor, GIF creation, and cloud sharing integration.",
                 version: "5.7.0",
                 size: "55 MB",
                 rating: 4.6,
@@ -453,11 +453,11 @@
             },
             {
                 id: 24,
-                name: "Html to web file Converter",
-                url: "https://rkd-630.github.io/TiingPong",
-                developer: "CyberShield Corp",
-                category: "security",
-                description: "Advanced cybersecurity suite offering real-time malware protection, firewall management, VPN encryption, and zero-day threat detection.",
+                name: "630RKD",
+                url: "https://rkd-630.github.io/630RKD",
+                developer: "DataCore Systems",
+                category: "development",
+                description: "Visual database management tool with multi-cloud query support, schema designer, data visualization, and automated backup scheduling.",
                 version: "6.0.2",
                 size: "310 MB",
                 rating: 4.7,
@@ -469,12 +469,616 @@
                 verified: true,
                 icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15aa38417-1a84-466c-be89-0630ef89106a.png",
                 features: ["Multi-cloud Query Support", "Visual Schema Designer", "Data Visualization", "Auto Backup Scheduling", "Query Builder", "Performance Analyzer"]
+            },
+            {
+                id: 25,
+                name: "CodeMaster Pro",
+                url: "https://rkd-630.github.io/codemaster",
+                developer: "DevTech Solutions",
+                category: "development",
+                description: "Advanced code editor with AI pair programming and multi-language support.",
+                version: "2.1.0",
+                size: "150 MB",
+                rating: 4.8,
+                downloads: 1200000,
+                price: "Free",
+                tags: ["IDE", "Coding", "AI"],
+                isNew: true,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/12dd1db96-31a2-4711-a37b-4a8a945e4341.png",
+                features: ["AI Code Assistant", "Live Preview", "Git Integration"]
+            },
+            {
+                id: 26,
+                name: "Pixel Perfect",
+                url: "https://rkd-630.github.io/pixelperfect",
+                developer: "Creative Arts Inc",
+                category: "design",
+                description: "Vector graphics editor for UI/UX design with collaboration features.",
+                version: "3.5.2",
+                size: "200 MB",
+                rating: 4.7,
+                downloads: 850000,
+                price: "$15/mo",
+                tags: ["Design", "UI", "UX"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15e011eea-8d08-4c80-97d3-f9825c6deca5.png",
+                features: ["Vector Editing", "Prototyping", "Team Collaboration"]
+            },
+            {
+                id: 27,
+                name: "NoteSync",
+                url: "https://rkd-630.github.io/notesync",
+                developer: "ProductiveFlow Ltd",
+                category: "productivity",
+                description: "Cross-platform note-taking app with markdown support and cloud sync.",
+                version: "1.2.0",
+                size: "45 MB",
+                rating: 4.6,
+                downloads: 300000,
+                price: "Free",
+                tags: ["Notes", "Productivity", "Markdown"],
+                isNew: true,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1f1941ba9-ca78-4854-a380-f8f0e58a18e6.png",
+                features: ["Markdown", "Cloud Sync", "Tags"]
+            },
+            {
+                id: 28,
+                name: "CyberGuard",
+                url: "https://rkd-630.github.io/cyberguard",
+                developer: "SecureVault Inc",
+                category: "security",
+                description: "Complete endpoint protection suite with ransomware rollback.",
+                version: "5.0.0",
+                size: "350 MB",
+                rating: 4.9,
+                downloads: 5000000,
+                price: "$40/yr",
+                tags: ["Antivirus", "Security", "Endpoint"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1ddbb670f-6e6d-4108-b7f1-7dc509f70591.png",
+                features: ["Ransomware Protection", "Firewall", "Web Shield"]
+            },
+            {
+                id: 29,
+                name: "AudioMix Pro",
+                url: "https://rkd-630.github.io/audiomix",
+                developer: "MediaTech Studios",
+                category: "multimedia",
+                description: "Digital audio workstation for recording, editing, and mixing music.",
+                version: "4.1.0",
+                size: "600 MB",
+                rating: 4.8,
+                downloads: 900000,
+                price: "$199",
+                tags: ["Audio", "DAW", "Music"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1d44a4666-3aca-4588-a385-bf2fd3702a23.png",
+                features: ["Multi-track Recording", "VST Plugins", "MIDI Support"]
+            },
+            {
+                id: 30,
+                name: "DiskCleaner",
+                url: "https://rkd-630.github.io/diskcleaner",
+                developer: "SyncSoft Technologies",
+                category: "utilities",
+                description: "System optimization tool to free up disk space and improve performance.",
+                version: "2.5.1",
+                size: "25 MB",
+                rating: 4.4,
+                downloads: 4000000,
+                price: "Free",
+                tags: ["System", "Cleanup", "Optimization"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/16ad70104-3a8c-48f2-be28-16ff1fb76a91.png",
+                features: ["Junk File Removal", "Registry Cleaner", "Startup Manager"]
+            },
+            {
+                id: 31,
+                name: "DataViz Studio",
+                url: "https://rkd-630.github.io/dataviz",
+                developer: "DataCore Systems",
+                category: "development",
+                description: "Create interactive charts and dashboards from various data sources.",
+                version: "1.8.0",
+                size: "120 MB",
+                rating: 4.5,
+                downloads: 150000,
+                price: "$29/mo",
+                tags: ["Data", "Analytics", "Charts"],
+                isNew: true,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15aa38417-1a84-466c-be89-0630ef89106a.png",
+                features: ["Interactive Charts", "Data Connectors", "Export Options"]
+            },
+            {
+                id: 32,
+                name: "TypeMaster",
+                url: "https://rkd-630.github.io/typemaster",
+                developer: "ProductiveFlow Ltd",
+                category: "productivity",
+                description: "Learn touch typing with interactive lessons and games.",
+                version: "3.0.0",
+                size: "80 MB",
+                rating: 4.7,
+                downloads: 600000,
+                price: "Free",
+                tags: ["Typing", "Education", "Productivity"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1f1941ba9-ca78-4854-a380-f8f0e58a18e6.png",
+                features: ["Interactive Lessons", "Typing Games", "Progress Tracking"]
+            },
+            {
+                id: 33,
+                name: "PasswordSafe",
+                url: "https://rkd-630.github.io/passwordsafe",
+                developer: "SecureVault Inc",
+                category: "security",
+                description: "Secure password manager with cross-device sync and auto-fill.",
+                version: "4.2.0",
+                size: "30 MB",
+                rating: 4.9,
+                downloads: 2500000,
+                price: "$12/yr",
+                tags: ["Passwords", "Security", "Vault"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1ddbb670f-6e6d-4108-b7f1-7dc509f70591.png",
+                features: ["Password Generator", "Auto-fill", "Encrypted Vault"]
+            },
+            {
+                id: 34,
+                name: "VideoCompress",
+                url: "https://rkd-630.github.io/videocompress",
+                developer: "MediaTech Studios",
+                category: "multimedia",
+                description: "Fast and easy video compression tool without quality loss.",
+                version: "2.0.1",
+                size: "40 MB",
+                rating: 4.6,
+                downloads: 800000,
+                price: "Free",
+                tags: ["Video", "Compression", "Utility"],
+                isNew: true,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1d44a4666-3aca-4588-a385-bf2fd3702a23.png",
+                features: ["Batch Compression", "Format Conversion", "High Quality"]
+            },
+            {
+                id: 35,
+                name: "FontManager",
+                url: "https://rkd-630.github.io/fontmanager",
+                developer: "Creative Arts Inc",
+                category: "design",
+                description: "Organize and preview your font collection with ease.",
+                version: "1.5.0",
+                size: "20 MB",
+                rating: 4.3,
+                downloads: 200000,
+                price: "Free",
+                tags: ["Fonts", "Design", "Management"],
+                isNew: false,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15e011eea-8d08-4c80-97d3-f9825c6deca5.png",
+                features: ["Font Preview", "Tagging", "Auto-activation"]
+            },
+            {
+                id: 36,
+                name: "NetSpeed Monitor",
+                url: "https://rkd-630.github.io/netspeed",
+                developer: "NetSight Systems",
+                category: "utilities",
+                description: "Real-time network speed monitor in your system tray.",
+                version: "3.2.0",
+                size: "15 MB",
+                rating: 4.5,
+                downloads: 1500000,
+                price: "Free",
+                tags: ["Network", "Speed", "Monitor"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/12747d3e4-e921-4e13-bae8-b29b74bd35ed.png",
+                features: ["Taskbar Widget", "Traffic History", "Bandwidth Limits"]
+            },
+            {
+                id: 37,
+                name: "API Tester",
+                url: "https://rkd-630.github.io/apitester",
+                developer: "DevTech Solutions",
+                category: "development",
+                description: "Lightweight tool for testing REST and GraphQL APIs.",
+                version: "1.1.0",
+                size: "65 MB",
+                rating: 4.8,
+                downloads: 400000,
+                price: "Free",
+                tags: ["API", "Testing", "DevTools"],
+                isNew: true,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/12dd1db96-31a2-4711-a37b-4a8a945e4341.png",
+                features: ["REST/GraphQL", "Environment Variables", "History"]
+            },
+            {
+                id: 38,
+                name: "FocusTimer",
+                url: "https://rkd-630.github.io/focustimer",
+                developer: "ProductiveFlow Ltd",
+                category: "productivity",
+                description: "Pomodoro timer to help you stay focused and manage your time.",
+                version: "2.3.0",
+                size: "35 MB",
+                rating: 4.6,
+                downloads: 750000,
+                price: "Free",
+                tags: ["Pomodoro", "Focus", "Time"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1f1941ba9-ca78-4854-a380-f8f0e58a18e6.png",
+                features: ["Custom Intervals", "Task Tracking", "Statistics"]
+            },
+            {
+                id: 39,
+                name: "VPN Shield",
+                url: "https://rkd-630.github.io/vpnshield",
+                developer: "CyberShield Corp",
+                category: "security",
+                description: "Fast and secure VPN service for anonymous browsing.",
+                version: "4.5.0",
+                size: "55 MB",
+                rating: 4.7,
+                downloads: 3000000,
+                price: "$5/mo",
+                tags: ["VPN", "Privacy", "Network"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/16d3fcb5d-6673-4d10-9782-2e25992370cc.png",
+                features: ["No-logs Policy", "Kill Switch", "Global Servers"]
+            },
+            {
+                id: 40,
+                name: "ScreenCaster",
+                url: "https://rkd-630.github.io/screencaster",
+                developer: "MediaTech Studios",
+                category: "multimedia",
+                description: "Live streaming and screen recording software for gamers and creators.",
+                version: "3.8.0",
+                size: "180 MB",
+                rating: 4.8,
+                downloads: 2000000,
+                price: "Free",
+                tags: ["Streaming", "Recording", "Broadcasting"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1d44a4666-3aca-4588-a385-bf2fd3702a23.png",
+                features: ["Scene Transitions", "Audio Mixing", "Multi-streaming"]
+            },
+            {
+                id: 41,
+                name: "Archive Manager",
+                url: "https://rkd-630.github.io/archivemanager",
+                developer: "SyncSoft Technologies",
+                category: "utilities",
+                description: "Extract, create, and manage compressed file archives.",
+                version: "5.5.0",
+                size: "40 MB",
+                rating: 4.5,
+                downloads: 5000000,
+                price: "Free",
+                tags: ["Zip", "Extract", "Archive"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/16ad70104-3a8c-48f2-be28-16ff1fb76a91.png",
+                features: ["Multi-format Support", "Encryption", "High Compression"]
+            },
+            {
+                id: 42,
+                name: "ColorPicker Pro",
+                url: "https://rkd-630.github.io/colorpicker",
+                developer: "Creative Arts Inc",
+                category: "design",
+                description: "Advanced color picker and palette generator for designers.",
+                version: "2.1.0",
+                size: "18 MB",
+                rating: 4.4,
+                downloads: 350000,
+                price: "Free",
+                tags: ["Color", "Design", "Palette"],
+                isNew: false,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15e011eea-8d08-4c80-97d3-f9825c6deca5.png",
+                features: ["Screen Eyedropper", "Palette Export", "Contrast Checker"]
+            },
+            {
+                id: 43,
+                name: "Regex Tester",
+                url: "https://rkd-630.github.io/regextester",
+                developer: "DevTech Solutions",
+                category: "development",
+                description: "Tool for testing and debugging regular expressions.",
+                version: "1.0.0",
+                size: "10 MB",
+                rating: 4.7,
+                downloads: 100000,
+                price: "Free",
+                tags: ["Regex", "Development", "Tool"],
+                isNew: true,
+                isPopular: false,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/12dd1db96-31a2-4711-a37b-4a8a945e4341.png",
+                features: ["Real-time Match", "Cheat Sheet", "Code Generator"]
+            },
+            {
+                id: 44,
+                name: "MindMapper",
+                url: "https://rkd-630.github.io/mindmapper",
+                developer: "ProductiveFlow Ltd",
+                category: "productivity",
+                description: "Create visual mind maps for brainstorming and project planning.",
+                version: "3.4.0",
+                size: "95 MB",
+                rating: 4.8,
+                downloads: 1100000,
+                price: "$25/yr",
+                tags: ["Mindmap", "Brainstorming", "Planning"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/1f1941ba9-ca78-4854-a380-f8f0e58a18e6.png",
+                features: ["Drag and Drop", "Export to PDF", "Team Sharing"]
             }
         ];
 
         let currentCategory = 'all';
         let currentView = 'grid';
         let currentSort = 'popular';
+        let isEditMode = false;
+        let currentEditingImage = null;
+        let currentEditingLink = null;
+        let originalContent = null;
+
+        // Toggle Edit Mode
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            const body = document.body;
+            const editToggle = document.getElementById('editToggle');
+            const saveBtn = document.getElementById('saveBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const editIndicator = document.getElementById('editIndicator');
+
+            if (isEditMode) {
+                // Save original content
+                originalContent = document.body.innerHTML;
+                
+                body.classList.add('edit-mode');
+                editToggle.textContent = '❌ Edit Mode Off';
+                editToggle.classList.add('active');
+                saveBtn.style.display = 'flex';
+                cancelBtn.style.display = 'flex';
+                editIndicator.classList.add('active');
+
+                // Make elements editable
+                enableEditing();
+                showToast('info', 'Edit Mode ON', 'Click on any text, image, or link to edit it');
+            } else {
+                disableEditing();
+                editToggle.textContent = '✏️ Edit Mode';
+                editToggle.classList.remove('active');
+                saveBtn.style.display = 'none';
+                cancelBtn.style.display = 'none';
+                editIndicator.classList.remove('active');
+                showToast('info', 'Edit Mode OFF', 'Editing has been disabled');
+            }
+        }
+
+        // Enable editing on elements
+        function enableEditing() {
+            // Make text elements editable
+            document.querySelectorAll('.editable-text, .ticker-item, .card-title, .card-developer, .card-description, .tag, .stat-info h4, .stat-info p, .section-title, .footer-col h4, .footer-brand p, .footer-bottom p').forEach(el => {
+                el.setAttribute('contenteditable', 'true');
+            });
+
+            // Make images editable
+            document.querySelectorAll('img').forEach(img => {
+                img.classList.add('editable-image');
+                img.onclick = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openImageModal(img);
+                };
+            });
+
+            // Make links editable
+            document.querySelectorAll('a').forEach(link => {
+                link.classList.add('editable-link');
+                link.onclick = (e) => {
+                    if (isEditMode) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openLinkModal(link);
+                    }
+                };
+            });
+        }
+
+        // Disable editing
+        function disableEditing() {
+            document.body.classList.remove('edit-mode');
+            
+            document.querySelectorAll('[contenteditable]').forEach(el => {
+                el.removeAttribute('contenteditable');
+            });
+
+            document.querySelectorAll('.editable-image').forEach(img => {
+                img.classList.remove('editable-image');
+                img.onclick = null;
+            });
+
+            document.querySelectorAll('.editable-link').forEach(link => {
+                link.onclick = null;
+            });
+        }
+
+        // Save as HTML file and hide edit button
+        function saveAsHTML() {
+            // First, clean up the HTML by removing edit mode artifacts
+            const clone = document.documentElement.cloneNode(true);
+            
+            // Remove edit mode classes and attributes from clone
+            clone.querySelectorAll('[contenteditable]').forEach(el => {
+                el.removeAttribute('contenteditable');
+            });
+            
+            clone.querySelectorAll('.editable-image').forEach(img => {
+                img.classList.remove('editable-image');
+                img.removeAttribute('onclick');
+            });
+            
+            clone.querySelectorAll('.editable-link').forEach(link => {
+                link.classList.remove('editable-link');
+            });
+            
+            // Remove edit mode toggle from the saved file (hide it permanently)
+            const editToggle = clone.querySelector('#editModeToggle');
+            if (editToggle) {
+                editToggle.style.display = 'none';
+            }
+            
+            // Remove edit indicator
+            const editIndicator = clone.querySelector('#editIndicator');
+            if (editIndicator) {
+                editIndicator.classList.remove('active');
+                editIndicator.style.display = 'none';
+            }
+            
+            // Remove image and link edit modals
+            const imageModal = clone.querySelector('#imageEditModal');
+            if (imageModal) imageModal.remove();
+            const linkModal = clone.querySelector('#linkEditModal');
+            if (linkModal) linkModal.remove();
+            
+            // Remove edit-mode class from body
+            clone.querySelector('body').classList.remove('edit-mode');
+            
+            // Get the cleaned HTML
+            let htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
+            
+            // Create blob and download
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'SoftwareHub_' + new Date().toISOString().slice(0, 10) + '.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Show success toast
+            showToast('success', 'File Saved!', 'HTML file has been downloaded successfully.');
+            
+            // Hide the edit mode toggle permanently
+            const toggleContainer = document.getElementById('editModeToggle');
+            toggleContainer.classList.add('hidden');
+            
+            // Exit edit mode
+            isEditMode = false;
+            disableEditing();
+            document.getElementById('editIndicator').classList.remove('active');
+            
+            // Also hide on current page after a short delay
+            setTimeout(() => {
+                toggleContainer.style.display = 'none';
+            }, 400);
+        }
+
+        // Cancel editing
+        function cancelEdit() {
+            if (originalContent) {
+                document.body.innerHTML = originalContent;
+                showToast('info', 'Cancelled', 'Changes have been discarded');
+            }
+            isEditMode = false;
+            document.getElementById('editToggle').textContent = '✏️ Edit Mode';
+            document.getElementById('editToggle').classList.remove('active');
+            document.getElementById('saveBtn').style.display = 'none';
+            document.getElementById('cancelBtn').style.display = 'none';
+            document.getElementById('editIndicator').classList.remove('active');
+            
+            // Re-initialize after cancel
+            setTimeout(() => {
+                renderSoftware(softwareData);
+            }, 100);
+        }
+
+        // Image editing
+        function openImageModal(imgElement) {
+            currentEditingImage = imgElement;
+            const modal = document.getElementById('imageEditModal');
+            const input = document.getElementById('imageUrlInput');
+            input.value = imgElement.src;
+            modal.classList.add('active');
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageEditModal').classList.remove('active');
+            currentEditingImage = null;
+        }
+
+        function applyImageChange() {
+            const newUrl = document.getElementById('imageUrlInput').value;
+            if (currentEditingImage && newUrl) {
+                currentEditingImage.src = newUrl;
+                showToast('success', 'Image Updated', 'Image has been changed successfully');
+            }
+            closeImageModal();
+        }
+
+        // Link editing
+        function openLinkModal(linkElement) {
+            currentEditingLink = linkElement;
+            const modal = document.getElementById('linkEditModal');
+            const input = document.getElementById('linkUrlInput');
+            input.value = linkElement.href;
+            modal.classList.add('active');
+        }
+
+        function closeLinkModal() {
+            document.getElementById('linkEditModal').classList.remove('active');
+            currentEditingLink = null;
+        }
+
+        function applyLinkChange() {
+            const newUrl = document.getElementById('linkUrlInput').value;
+            if (currentEditingLink && newUrl) {
+                currentEditingLink.href = newUrl;
+                showToast('success', 'Link Updated', 'Link has been changed successfully');
+            }
+            closeLinkModal();
+        }
 
         // Render software cards
         function renderSoftware(data) {
@@ -549,6 +1153,10 @@
 
             document.getElementById('resultsCount').innerHTML = `Showing <strong>${data.length}</strong> software`;
 
+            // Re-enable editing if in edit mode
+            if (isEditMode) {
+                enableEditing();
+            }
         }
 
         function generateStars(rating) {
@@ -739,9 +1347,14 @@
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
 
+            // Enable editing in modal if in edit mode
+            if (isEditMode) {
+                enableEditing();
+            }
         }
 
-        function closeModal() {
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
             const overlay = document.getElementById('modalOverlay');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
@@ -749,7 +1362,7 @@
 
         // Download simulation
         function startDownload(name, size) {
-
+            showToast('success', 'Download Started', `${name} (${size}) is downloading...`);
 
             // Find a software item to show progress
             const sw = softwareData.find(s => s.name === name);
@@ -764,7 +1377,7 @@
                             progress = 100;
                             clearInterval(interval);
                             document.getElementById(`progressText_${sw.id}`).textContent = 'Download complete!';
-
+                            showToast('success', 'Download Complete', `${name} has been downloaded successfully!`);
                         }
                         document.getElementById(`progressFill_${sw.id}`).style.width = progress + '%';
                         document.getElementById(`progressPercent_${sw.id}`).textContent = Math.round(progress) + '%';
@@ -777,7 +1390,7 @@
 
         // Demo launch
         function launchDemo(name) {
-
+            showToast('info', 'Launching Demo', `Opening demo version of ${name}...`);
 
             // Simulate opening a demo window
             setTimeout(() => {
@@ -812,12 +1425,35 @@
             closeModal();
         }
 
+        // Toast notifications
+        function showToast(type, title, message) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
 
+            const icons = { success: '✅', info: 'ℹ️', warning: '⚠️' };
+
+            toast.innerHTML = `
+                <span class="toast-icon">${icons[type]}</span>
+                <div class="toast-content">
+                    <h5>${title}</h5>
+                    <p>${message}</p>
+                </div>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3500);
+        }
 
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeModal();
+                closeImageModal();
+                closeLinkModal();
             }
             if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
                 const input = document.getElementById('searchInput');
@@ -826,127 +1462,12 @@
                     input.focus();
                 }
             }
+            // Ctrl+S to save in edit mode
+            if (e.ctrlKey && e.key === 's' && isEditMode) {
+                e.preventDefault();
+                saveAsHTML();
+            }
         });
 
         // Initialize
-        const storedCustomSoftware = JSON.parse(localStorage.getItem('customSoftware') || '[]');
-        storedCustomSoftware.reverse().forEach(sw => softwareData.unshift(sw));
         renderSoftware(softwareData);
-
-        // Bind modal close button explicitly
-        const closeBtn = document.getElementById('mainModalCloseBtn');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                closeModal();
-            });
-        }
-
-        // Drag to scroll for category tabs
-        const tabsContainer = document.getElementById('categoryTabs');
-        if (tabsContainer) {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            tabsContainer.addEventListener('mousedown', (e) => {
-                isDown = true;
-                tabsContainer.classList.add('active');
-                startX = e.pageX - tabsContainer.offsetLeft;
-                scrollLeft = tabsContainer.scrollLeft;
-            });
-
-            tabsContainer.addEventListener('mouseleave', () => {
-                isDown = false;
-                tabsContainer.classList.remove('active');
-            });
-
-            tabsContainer.addEventListener('mouseup', () => {
-                isDown = false;
-                tabsContainer.classList.remove('active');
-            });
-
-            tabsContainer.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - tabsContainer.offsetLeft;
-                const walk = (x - startX) * 1.5; // Scroll speed
-                tabsContainer.scrollLeft = scrollLeft - walk;
-            });
-        }
-
-        // Admin features
-        let isAdmin = false;
-
-        function handleLogin() {
-            if (isAdmin) {
-                // Logout
-                isAdmin = false;
-                document.getElementById('addSoftwareBtn').style.display = 'none';
-                document.getElementById('loginBtn').textContent = 'Sign In';
-                alert('Logged out successfully.');
-                return;
-            }
-
-            const email = prompt('Enter your email to sign in:');
-            if (email === 'ramkrishan630@gmail.com') {
-                alert('Email confirmed. Welcome Admin!');
-                isAdmin = true;
-                document.getElementById('addSoftwareBtn').style.display = 'inline-block';
-                document.getElementById('loginBtn').textContent = 'Admin (Log out)';
-            } else if (email) {
-                alert('Access denied. Only admin email is allowed.');
-            }
-        }
-
-        function openAddSoftwareModal() {
-            document.getElementById('addSoftwareModalOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeAddSoftwareModal() {
-            document.getElementById('addSoftwareModalOverlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function handleAddSoftware(event) {
-            event.preventDefault();
-            
-            const newSoftware = {
-                id: parseInt(document.getElementById('as_id').value),
-                name: document.getElementById('as_name').value,
-                url: document.getElementById('as_url').value,
-                developer: document.getElementById('as_developer').value,
-                category: document.getElementById('as_category').value,
-                description: document.getElementById('as_description').value,
-                version: document.getElementById('as_version').value,
-                size: document.getElementById('as_size').value,
-                rating: parseFloat(document.getElementById('as_rating').value),
-                downloads: parseInt(document.getElementById('as_downloads').value),
-                price: document.getElementById('as_price').value,
-                tags: document.getElementById('as_tags').value.split(',').map(tag => tag.trim()).filter(tag => tag),
-                isPopular: document.getElementById('as_isPopular').checked,
-                verified: document.getElementById('as_verified').checked,
-                icon: document.getElementById('as_icon').value,
-                features: document.getElementById('as_features').value.split(',').map(f => f.trim()).filter(f => f),
-                isNew: true
-            };
-            
-            softwareData.unshift(newSoftware); // Add to the top
-            
-            // Save permanently to localStorage
-            const storedCustomSoftware = JSON.parse(localStorage.getItem('customSoftware') || '[]');
-            storedCustomSoftware.unshift(newSoftware);
-            localStorage.setItem('customSoftware', JSON.stringify(storedCustomSoftware));
-            
-            // Re-render
-            filterSoftware();
-            
-            closeAddSoftwareModal();
-            document.getElementById('addSoftwareForm').reset();
-            alert('Software card added successfully!');
-
-            // Auto-logout after adding
-            handleLogin();
-        }

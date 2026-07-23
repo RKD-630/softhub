@@ -3,8 +3,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoftwareHub - Your Digital Toolkit</title>
     
-<link rel="stylesheet" href="style.css?v=2" /></head>
+<link rel="stylesheet" href="style.css" /></head>
 <body class="">
+
+    <!-- Edit Mode Controls -->
+    <div class="edit-mode-toggle" id="editModeToggle" style="display: none;">
+        <button class="edit-btn primary active" id="editToggle" onclick="toggleEditMode()">❌ Edit Mode Off</button>
+        <button class="edit-btn save" id="saveBtn" style="display: flex;" onclick="saveAsHTML()">
+            💾 Save as HTML
+        </button>
+        <button class="edit-btn cancel" id="cancelBtn" style="display: flex;" onclick="cancelEdit()">
+            ✕ Cancel
+        </button>
+    </div>
+
+    <!-- Edit Indicator -->
+    <div class="edit-indicator" id="editIndicator" style="display: none;">
+        ✏️ Edit Mode Active - Click any text, image, or link to edit
+    </div>
+
+    <!-- Image Edit Modal -->
+    
+
+    <!-- Link Edit Modal -->
+    
+
     <!-- News Ticker -->
     <div class="ticker-wrap">
         <div class="ticker" id="ticker">
@@ -48,14 +71,44 @@
                 <input type="text" id="searchInput" placeholder="Search software by name, category, or tags..." oninput="filterSoftware()" />
             </div>
             <div class="header-actions">
-                <button class="btn-header btn-outline" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Theme" style="padding: 10px 15px;">🌙</button>
-                <button class="btn-header btn-outline" id="addSoftwareBtn" onclick="openAddSoftwareModal()" style="display: none;">Add Software</button>
-                <button class="btn-header btn-outline" id="loginBtn" onclick="handleLogin()">Sign In</button>
+                <button class="btn-header btn-outline" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Theme" style="padding: 10px 15px;">☀️</button>
+                <button class="btn-header btn-outline" onclick="showToast('info', 'Account', 'Sign in feature coming soon!')">Sign In</button>
                 <button class="btn-header btn-primary">Get Started</button>
             </div>
         </div>
     </header>
 
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(108,92,231,0.15);">📦</div>
+            <div class="stat-info">
+                <h4 class="editable-text">12,480+</h4>
+                <p class="editable-text">Total Software</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(0,206,201,0.15);">⬇️</div>
+            <div class="stat-info">
+                <h4 class="editable-text">8.2M+</h4>
+                <p class="editable-text">Total Downloads</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(253,121,168,0.15);">⭐</div>
+            <div class="stat-info">
+                <h4 class="editable-text">4.8/5</h4>
+                <p class="editable-text">Avg. User Rating</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon" style="background: rgba(253,203,110,0.15);">👥</div>
+            <div class="stat-info">
+                <h4 class="editable-text">540K+</h4>
+                <p class="editable-text">Active Users</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Category Section -->
     <div class="category-section">
@@ -91,11 +144,11 @@
     <div class="software-grid" id="softwareGrid"></div>
 
     <!-- Modal -->
-    <div class="modal-overlay" id="modalOverlay" onclick="if(event.target === this) closeModal()">
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
         <div class="modal" onclick="event.stopPropagation()">
             <div class="modal-header">
                 <h3 id="modalTitle">Software Details</h3>
-                <button class="modal-close" id="mainModalCloseBtn">✕</button>
+                <button class="modal-close" onclick="closeModal()">✕</button>
             </div>
             <div class="modal-body" id="modalBody">
                 <!-- Dynamic content -->
@@ -103,44 +156,14 @@
         </div>
     </div>
 
-    <!-- Add Software Modal -->
-    <div class="modal-overlay" id="addSoftwareModalOverlay" onclick="if(event.target === this) closeAddSoftwareModal()">
-        <div class="modal" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h3>Add New Software</h3>
-                <button class="modal-close" onclick="closeAddSoftwareModal()">✕</button>
-            </div>
-            <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
-                <form id="addSoftwareForm" onsubmit="handleAddSoftware(event)" style="display: flex; flex-direction: column; gap: 15px;">
-                    <input type="number" id="as_id" placeholder="ID (e.g. 25)" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="text" id="as_name" placeholder="Name" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="url" id="as_url" placeholder="URL" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="text" id="as_developer" placeholder="Developer" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <select id="as_category" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                        <option value="">Select Category</option>
-                        <option value="development">Development</option>
-                        <option value="design">Design</option>
-                        <option value="productivity">Productivity</option>
-                        <option value="security">Security</option>
-                        <option value="multimedia">Multimedia</option>
-                        <option value="utilities">Utilities</option>
-                    </select>
-                    <textarea id="as_description" placeholder="Description" required rows="3" style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);"></textarea>
-                    <input type="text" id="as_version" placeholder="Version (e.g. 1.0.0)" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="text" id="as_size" placeholder="Size (e.g. 50 MB)" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="number" id="as_rating" placeholder="Rating (0-5)" step="0.1" min="0" max="5" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="number" id="as_downloads" placeholder="Downloads (e.g. 1000)" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="text" id="as_price" placeholder="Price (e.g. Free or $10/mo)" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <input type="text" id="as_tags" placeholder="Tags (comma separated)" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <label style="display: flex; align-items: center; gap: 8px; color: var(--text-primary);"><input type="checkbox" id="as_isPopular"> Is Popular</label>
-                    <label style="display: flex; align-items: center; gap: 8px; color: var(--text-primary);"><input type="checkbox" id="as_verified"> Verified</label>
-                    <input type="url" id="as_icon" placeholder="Icon URL" required style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);">
-                    <textarea id="as_features" placeholder="Features (comma separated)" required rows="3" style="padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-primary);"></textarea>
-                    <button type="submit" class="btn-header btn-primary" style="margin-top: 10px; width: 100%;">Add Software Card</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"><div class="toast info">
+                <span class="toast-icon">ℹ️</span>
+                <div class="toast-content">
+                    <h5>Edit Mode ON</h5>
+                    <p>Click on any text, image, or link to edit it</p>
+                </div>
+            </div></div>
 
     <!-- Footer -->
     <footer>
@@ -194,4 +217,4 @@
     
 
 
-<script src="script.js?v=2"></script></body></html>
+<script src="script.js"></script></body></html>
