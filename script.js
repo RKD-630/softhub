@@ -129,7 +129,7 @@
             },
             {
                 id: 6,
-                name: "Wireless",
+                name: "VK paint",
                 url: "https://rkd-630.github.io/wireless",
                 developer: "SyncSoft Technologies",
                 category: "utilities",
@@ -263,8 +263,8 @@
             },
             {
                 id: 14,
-                name: "Game-Hub",
-                url: "https://rkd-630.github.io/Game-Hub",
+                name: "AEROTALK",
+                url: "https://rkd-630.github.io/at",
                 developer: "Creative Arts Inc",
                 category: "design",
                 description: "Professional graphic design suite with vector editing, photo manipulation, 3D rendering, and an extensive library of templates and assets.",
