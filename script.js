@@ -491,7 +491,7 @@
             },
             {
                 id: 26,
-                name: "#D ",
+                name: "3D Sketch",
                 url: "https://rkd-630.github.io/v",
                 developer: "Creative Arts Inc",
                 category: "design",
