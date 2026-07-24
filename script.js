@@ -529,7 +529,7 @@
             }, 
             {
                 id: 28,
-                name: "PDF print",
+                name: "PDF Calendar",
                 url: "https://rkd-630.github.io/calendar",
                 developer: "Creative Arts Inc",
                 category: "design",
