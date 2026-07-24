@@ -545,8 +545,27 @@
                 verified: true,
                 icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15e011eea-8d08-4c80-97d3-f9825c6deca5.png",
                 features: ["Vector Editing", "Prototyping", "Team Collaboration"]
-            },  ];
-
+            },  
+            {
+                id: 29,
+                name: "QR Codes",
+                url: "https://rkd-630.github.io/qrcode",
+                developer: "Creative Arts Inc",
+                category: "design",
+                description: "Vector graphics editor for UI/UX design with collaboration features.",
+                version: "3.5.2",
+                size: "200 MB",
+                rating: 4.7,
+                downloads: 850000,
+                price: "$15/mo",
+                tags: ["Design", "UI", "UX"],
+                isNew: false,
+                isPopular: true,
+                verified: true,
+                icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15e011eea-8d08-4c80-97d3-f9825c6deca5.png",
+                features: ["Vector Editing", "Prototyping", "Team Collaboration"]
+            },  
+            ];
         let currentCategory = 'all';
         let currentView = 'grid';
         let currentSort = 'popular';
