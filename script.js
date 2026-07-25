@@ -32,8 +32,8 @@
             },
             {
                 id: 1,
-                name: "BG Remover",
-                url: "https://rkd-630.github.io/vdo-edit/",
+                name: "PDF Conerter",
+                url: "https://rkd-630.github.io/campdf",
                 developer: "DevTech Solutions",
                 category: "development",
                 description: "Next-generation integrated development environment with AI-powered code completion, real-time collaboration, and support for 50+ programming languages.",
@@ -167,8 +167,8 @@
             },
             {
                 id: 8,
-                name: "PDF Converter",
-                url: "https://rkd-630.github.io/campdf",
+                name: "BG Remover",
+                url: "https://rkd-630.github.io/vdo-edit/",
                 developer: "AudioPro Labs",
                 category: "multimedia",
                 description: "Professional audio editing and production suite with spatial audio mixing, AI noise reduction, multi-track recording, and mastering tools.",
