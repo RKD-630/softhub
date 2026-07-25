@@ -263,7 +263,7 @@
             },
             {
                 id: 14,
-                name: "AEROTALK",
+                name: "Aero Talk",
                 url: "https://rkd-630.github.io/at",
                 developer: "Creative Arts Inc",
                 category: "design",
@@ -415,8 +415,8 @@
             },
             {
                 id: 22,
-                name: "TingPong",
-                url: "https://rkd-630.github.io/TingPong",
+                name: "Media Hub"
+                url: "https://rkd-630.github.io/media",
                 developer: "DocuTech Solutions",
                 category: "utilities",
                 description: "Complete PDF toolkit with editing, conversion, OCR, digital signatures, and AI-powered document summarization capabilities.",
