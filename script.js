@@ -415,7 +415,7 @@
             },
             {
                 id: 22,
-                name: "Media Hub".
+                name: "Media Hub",
                 url: "https://rkd-630.github.io/media",
                 developer: "DocuTech Solutions",
                 category: "utilities",
