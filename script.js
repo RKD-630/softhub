@@ -472,7 +472,7 @@
             },
             {
                 id: 25,
-                name: "coverbook",
+                name: "Cover Book",
                 url: "https://rkd-630.github.io/coverbook",
                 developer: "DevTech Solutions",
                 category: "development",
