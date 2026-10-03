@@ -339,7 +339,7 @@
             },
             {
                 id: 18,
-                name: "Post Craft",
+                name: "Unicon to Krutidev",
                 url: "https://rkd-630.github.io/postcraft",
                 developer: "SyncSoft Technologies",
                 category: "utilities",
@@ -396,7 +396,7 @@
             },
             {
                 id: 21,
-                name: "gameJI",
+                name: "GameJI",
                 url: "https://rkd-630.github.io/gameJI",
                 developer: "NetSight Systems",
                 category: "utilities",
@@ -662,8 +662,8 @@
             },  
                 {
                 id: 35,
-                name: "Bottom Navigation Bar Converter",
-                url: "https://rkd-630.github.io/mobottn/",
+                name: "Social Media Cover Page",
+                url: "https://rkd-630.github.io/coverpage/",
                 developer: "Creative Arts Inc",
                 category: "design",
                 description: "Vector graphics editor for UI/UX design with collaboration features.",
