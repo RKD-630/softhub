@@ -678,7 +678,7 @@
                 verified: true,
                 icon: "https://image.qwenlm.ai/public_source/a6108293-2fb7-42a1-b1e3-a7f74c11158c/15e011eea-8d08-4c80-97d3-f9825c6deca5.png",
                 features: ["Vector Editing", "Prototyping", "Team Collaboration"]
-            },  
+                 },  
             ];
         let currentCategory = 'all';
         let currentView = 'grid';
