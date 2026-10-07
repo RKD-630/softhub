@@ -115,7 +115,7 @@ function initFontSize() {
             },
             {
                 id: 1,
-                name: "PDF Conerter",
+                name: "PDF Converter",
                 url: "https://rkd-630.github.io/campdf",
                 developer: "DevTech Solutions",
                 category: "development",
@@ -155,8 +155,6 @@ function initFontSize() {
                 id: 3,
                 name: "Internet FM Radio",
                 url: "https://rkd-630.github.io/internet-FM-radio2",
-                developer: "ProductiveFlow Ltd",
-                category: "productivity",
                 developer: "ProductiveFlow Ltd",
                 category: "productivity",
                 description: "All-in-one project management and team collaboration tool with Kanban boards, Gantt charts, time tracking, and smart automation workflows.",
@@ -897,7 +895,7 @@ function initFontSize() {
             // Get the cleaned HTML
             let htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
             
-            // Create blob and download
+            // Create blob and download to user's Downloads folder
             const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -909,7 +907,7 @@ function initFontSize() {
             URL.revokeObjectURL(url);
             
             // Show success toast
-            showToast('success', 'File Saved!', 'HTML file has been downloaded successfully.');
+            showToast('success', 'File Saved!', 'HTML file saved to your Downloads folder.');
             
             // Hide the edit mode toggle permanently
             const toggleContainer = document.getElementById('editModeToggle');
@@ -1271,9 +1269,22 @@ function initFontSize() {
             document.body.style.overflow = '';
         }
 
-        // Download simulation
+        // Download simulation and file save to Downloads folder
         function startDownload(name, size) {
-            showToast('success', 'Download Started', `${name} (${size}) is downloading...`);
+            showToast('success', 'Download Started', `${name} (${size}) is saving to your Downloads folder...`);
+
+            // Create file download trigger for Downloads folder
+            const content = `SoftwareHub Package\n===================\nApplication: ${name}\nFile Size: ${size}\nStatus: Downloaded Successfully\nDate: ${new Date().toLocaleString()}\n\nThank you for using SoftwareHub!`;
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const safeName = name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+            a.download = `${safeName}_setup.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
 
             // Find a software item to show progress
             const sw = softwareData.find(s => s.name === name);
@@ -1288,7 +1299,7 @@ function initFontSize() {
                             progress = 100;
                             clearInterval(interval);
                             document.getElementById(`progressText_${sw.id}`).textContent = 'Download complete!';
-                            showToast('success', 'Download Complete', `${name} has been downloaded successfully!`);
+                            showToast('success', 'Download Complete', `${name} saved to your Downloads folder!`);
                         }
                         document.getElementById(`progressFill_${sw.id}`).style.width = progress + '%';
                         document.getElementById(`progressPercent_${sw.id}`).textContent = Math.round(progress) + '%';
