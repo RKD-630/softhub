@@ -73,43 +73,33 @@
             <div class="header-actions">
                 <button class="btn-header btn-outline" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Theme" style="padding: 10px 15px;">☀️</button>
                 <button class="btn-header btn-outline" onclick="showToast('info', 'Account', 'Sign in feature coming soon!')">Sign In</button>
-                <button class="btn-header btn-primary">Get Started</button>
+                <div class="font-size-dropdown" id="fontSizeDropdown">
+                    <button class="btn-header btn-primary font-size-btn" id="fontSizeBtn" onclick="toggleFontSizeMenu(event)" aria-haspopup="true" aria-expanded="false" title="Change Font Size">
+                        <span>🔤 Font Size</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="font-size-menu" id="fontSizeMenu">
+                        <button class="font-option" data-size="max" onclick="setFontSize('max')">
+                            <span class="font-option-label">Max</span>
+                            <span class="font-option-val">130%</span>
+                        </button>
+                        <button class="font-option active" data-size="normal" onclick="setFontSize('normal')">
+                            <span class="font-option-label">Normal</span>
+                            <span class="font-option-val">100%</span>
+                        </button>
+                        <button class="font-option" data-size="min" onclick="setFontSize('min')">
+                            <span class="font-option-label">Min</span>
+                            <span class="font-option-val">85%</span>
+                        </button>
+                        <button class="font-option" data-size="minus-min" onclick="setFontSize('minus-min')">
+                            <span class="font-option-label">-Min</span>
+                            <span class="font-option-val">70%</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stat-card">
-            <div class="stat-icon" style="background: rgba(108,92,231,0.15);">📦</div>
-            <div class="stat-info">
-                <h4 class="editable-text">12,480+</h4>
-                <p class="editable-text">Total Software</p>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon" style="background: rgba(0,206,201,0.15);">⬇️</div>
-            <div class="stat-info">
-                <h4 class="editable-text">8.2M+</h4>
-                <p class="editable-text">Total Downloads</p>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon" style="background: rgba(253,121,168,0.15);">⭐</div>
-            <div class="stat-info">
-                <h4 class="editable-text">4.8/5</h4>
-                <p class="editable-text">Avg. User Rating</p>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon" style="background: rgba(253,203,110,0.15);">👥</div>
-            <div class="stat-info">
-                <h4 class="editable-text">540K+</h4>
-                <p class="editable-text">Active Users</p>
-            </div>
-        </div>
-    </div>
-
     <!-- Category Section -->
     <div class="category-section">
         <div class="section-header">

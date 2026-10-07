@@ -1,14 +1,97 @@
 // Theme Toggle
-        function toggleTheme() {
-            const body = document.body;
-            const btn = document.getElementById('themeToggleBtn');
-            body.classList.toggle('light-theme');
-            if (body.classList.contains('light-theme')) {
-                btn.innerHTML = '🌙';
-            } else {
+function toggleTheme() {
+    const body = document.body;
+    const btn = document.getElementById('themeToggleBtn');
+    const isDark = body.classList.toggle('dark-theme');
+    if (isDark) {
+        if (btn) {
+            btn.innerHTML = '☀️';
+            btn.setAttribute('title', 'Switch to Light Theme');
+        }
+        localStorage.setItem('theme', 'dark');
+    } else {
+        if (btn) {
+            btn.innerHTML = '🌙';
+            btn.setAttribute('title', 'Switch to Dark Theme');
+        }
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const btn = document.getElementById('themeToggleBtn');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        if (btn) {
+            btn.innerHTML = '☀️';
+            btn.setAttribute('title', 'Switch to Light Theme');
+        }
+    } else if (savedTheme === 'light') {
+        document.body.classList.remove('dark-theme');
+        if (btn) {
+            btn.innerHTML = '🌙';
+            btn.setAttribute('title', 'Switch to Dark Theme');
+        }
+    } else {
+        if (document.body.classList.contains('dark-theme')) {
+            if (btn) {
                 btn.innerHTML = '☀️';
+                btn.setAttribute('title', 'Switch to Light Theme');
+            }
+        } else {
+            if (btn) {
+                btn.innerHTML = '🌙';
+                btn.setAttribute('title', 'Switch to Dark Theme');
             }
         }
+    }
+}
+
+// Font Size Control
+function setFontSize(size) {
+    const body = document.body;
+    const html = document.documentElement;
+    body.classList.remove('font-size-max', 'font-size-normal', 'font-size-min', 'font-size-minus-min');
+    html.classList.remove('font-size-max', 'font-size-normal', 'font-size-min', 'font-size-minus-min');
+
+    body.classList.add(`font-size-${size}`);
+    html.classList.add(`font-size-${size}`);
+
+    const options = document.querySelectorAll('.font-option');
+    options.forEach(opt => {
+        if (opt.getAttribute('data-size') === size) {
+            opt.classList.add('active');
+        } else {
+            opt.classList.remove('active');
+        }
+    });
+
+    localStorage.setItem('selectedFontSize', size);
+
+    const dropdown = document.getElementById('fontSizeDropdown');
+    if (dropdown) dropdown.classList.remove('open');
+}
+
+function toggleFontSizeMenu(event) {
+    if (event) event.stopPropagation();
+    const dropdown = document.getElementById('fontSizeDropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('open');
+    }
+}
+
+document.addEventListener('click', function(e) {
+    const dropdown = document.getElementById('fontSizeDropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+    }
+});
+
+function initFontSize() {
+    const savedSize = localStorage.getItem('selectedFontSize') || 'normal';
+    setFontSize(savedSize);
+}
         // Software data
         const softwareData = [
             {
@@ -1298,4 +1381,6 @@
         });
 
         // Initialize
+        initTheme();
+        initFontSize();
         renderSoftware(softwareData);
